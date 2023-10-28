@@ -25,5 +25,3 @@
   <img src="<?= base_url(); ?>assets/imagenes/DC_20230913111423_EUfLMVZu.jpg" alt="">
 </div>
 
-</body>
-</html>

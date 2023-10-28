@@ -8,8 +8,7 @@
 		
     }
   </style>
-</head>
-<body>
+
 <?php
     $id = "0";
     $nombre = "";

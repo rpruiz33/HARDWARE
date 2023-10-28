@@ -28,7 +28,7 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/footer');
            }else{
             $this->load->model('InsertarEnClientes');
-            $valido=$this->InsertarEnClientes->gurdarCliente($id,$nombre,$apellido, $dni,$email,$clave);
+            $valido=$this->InsertarEnClientes->gurdarCliente($id,$nombre,$apellido,$email,$dni);
             $this->load->view('principal/cabecera');
             $this->load->view('principal/nuevoCliente');
             $this->load->view('principal/footer');

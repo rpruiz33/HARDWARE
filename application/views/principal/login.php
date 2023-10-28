@@ -28,10 +28,8 @@
 <section class="form_carga">
 <h3 class="text-center">login</h3><br>
 <div id="formu_aric" class="container">
-    <form action="<?= base_url() ;?>Iniciar/validaLogin" method="POST" >
-    <div>
-        <input type="hidden" name="id" value="<?php echo $id;?>">
-      </div>  
+    <form action="<?= base_url() ;?>Iniciar/ValidaLogin" method="POST" >
+
     <div class="form-group row">
         <label for="nombre" class="col-md-3 col-form-label">Nombre </label>
         <div class="col-md-9">
@@ -39,9 +37,9 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="apellido" class="col-md-3 col-form-label">Dni </label>
+        <label for="dni" class="col-md-3 col-form-label">Dni </label>
         <div class="col-md-9">
-          <input type="text" name="apellido" class="form-control" required maxlength="40">
+          <input type="text" name="dni" class="form-control" required maxlength="40">
         </div>
       </div>
     </div>

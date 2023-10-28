@@ -42,16 +42,18 @@ class Iniciar extends CI_Controller {
         $tipo_cliente = $this->input->post('tipo_cliente');
 
         //$this->load->model('ModeloLogueo');
-        $valido = $this->ModeloLogueo->valLogin($nombre, $dni, $tipo_cliente);
-     
+        $valido = $this->ModeloLogueo->valLogin($nombre, $dni);
+   
         if ($valido != null) {
-            $this->session->set_userdata('tipo_cliente', $tipo_cliente);
-            $this->load->view('principal/cabecera',$tipo_cliente);
-            $this->load->view('principal/login');
+            
+            $this->load->view('principal/cabecera');
+            $this->load->view('principal/bienvenida');
             $this->load->view('principal/footer');
         } else {
-            $dato['conforme'] = "Clave y usuario incorrectos";
-            $this->load->view('logueo/ingresoSistema', $dato);
+           
+            $this->load->view('principal/cabecera');
+            $this->load->view('principal/login', );
+            $this->load->view('principal/footer');
         }
     }
  

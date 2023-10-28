@@ -9,7 +9,7 @@ class InsertarEnClientes extends CI_Model {
     }
 
 // La funcion guarda nombre y apellido en la tabla clientes
-function gurdarCliente($id,$nombre,$apellido,$dni,$email,$clave){   
+function gurdarCliente($id,$nombre,$apellido,$email,$dni){   
 
 		if($id > 0){
 			$data = array(
@@ -17,12 +17,12 @@ function gurdarCliente($id,$nombre,$apellido,$dni,$email,$clave){
 			'apellido' => $apellido,
 			'dni' => $dni,
 			'email' => $email,
-			'clave'=>$clave	);
+				);
 		
 			$this->db->where ('id' ,  $id);
 			$this->db->insert('clientes' ,  $data);
 		}else{
-			$consulta = $this->db->query("INSERT INTO clientes (nombre,apellido,dni,email,clave)   VALUES ('$nombre', '$apellido','$dni','$email','$clave')");
+			$consulta = $this->db->query("INSERT INTO clientes (nombre,apellido,email,dni)   VALUES ('$nombre', '$apellido','$email','$dni')");
 		}
         
        

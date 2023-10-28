@@ -9,8 +9,7 @@
       
   }
 </style>
-</head>
-<body>
+
 <?php
   $id = "0";
   $nombre = "";
@@ -62,5 +61,5 @@
  
       <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
- 
+</section>
   
