@@ -9,7 +9,8 @@
             <th scope="col">Apellido</th>
             <th scope="col">dni</th>
             <th scope="col">email</th>
-            
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

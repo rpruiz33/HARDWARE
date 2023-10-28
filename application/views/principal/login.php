@@ -2,12 +2,17 @@
 <style>
   
   .form_carga {
-      padding: 10px;
-  margin: 100px 32px 50px 25%;
-  width: 50%;
-  text-align: center;
-      
+    padding: 10px;
+    margin: 100px 32px 50px 25%;
+    width: 50%;
+    text-align: center;
+    height: 44vh;
+    margin-top: 90px;
+    margin-bottom: 9rem;
+    
   }
+
+ 
 </style>
 </head>
 <body>
@@ -47,3 +52,4 @@
  
       <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
+    </section>
