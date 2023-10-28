@@ -14,7 +14,7 @@ class OperarDatos extends CI_Controller {
 	        
         public function RecibirGrabar(){
             
-            if ($this->session->userdata('tipo_cliente') == 1){
+            {
             $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS); 
             $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_SPECIAL_CHARS); 
             $apellido = filter_input(INPUT_POST, 'apellido', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -33,9 +33,9 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/nuevoCliente');
             $this->load->view('principal/footer');
             }
-        }
-        }
-        public function RecibirGrabar2(){
+        
+        }}
+                public function RecibirGrabar2(){
             
             if ($this->session->userdata('tipo_cliente') == 1){
                 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS); 
@@ -149,7 +149,7 @@ class OperarDatos extends CI_Controller {
                 $nombre = $this->input->post('nombre');
                 $descripcion = $this->input->post('descripcion');
                 $precio = $this->input->post('precio');
-                $imagen_antigua = $this->input->post('imagen_antigua');  
+                $imagen2 = $this->input->post('imagen2');  
 
                 $config['upload_path'] = FCPATH . 'assets/imagenes';
                 $config['allowed_types'] = 'gif|jpg|jpeg|png';
@@ -167,7 +167,7 @@ class OperarDatos extends CI_Controller {
 
                    
                     if (!empty($imagen_antigua)) {
-                        unlink(FCPATH . 'assets/imagenes/' . $imagen_antigua);
+                        unlink(FCPATH . 'assets/imagenes/' . $imagen2);
                     }
                 }
 
@@ -175,7 +175,7 @@ class OperarDatos extends CI_Controller {
                     'nombre' => $nombre,
                     'descripcion' => $descripcion,
                     'precio' => $precio,
-                    'imagen' => isset($imagen) ? $imagen : $imagen_antigua,
+                    'imagen' => isset($imagen) ? $imagen : $imagen2,
                 );
 
                 

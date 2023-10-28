@@ -13,8 +13,10 @@
             <th scope="col">Artículo</th>
             <th scope="col">Descripción</th>
             <th scope="col">Precio</th>
+            <?php if ($this->session->userdata('tipo_cliente') == 1) { ?>
             <th scope="col"></th>
             <th scope="col"></th>
+            <?php }?>
           </tr>
         </thead>
         <tbody>

@@ -19,7 +19,7 @@
                         <input type="password" name="pass" class="form-control" required="" autocomplete="off">
                         <hr/>
                         <input type="checkbox" name="tipo_cliente" value="1">Admin <span class="glyphicon glyphicon-ok"></span> 
-                        <input type="checkbox" name="tipo_cliente" value="0">cliente <span class="glyphicon glyphicon-ok"></span> 
+                        <input type="checkbox" name="tipo_cliente" value="2">cliente <span class="glyphicon glyphicon-ok"></span> 
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
                         <p><br/></p>
                     </form>

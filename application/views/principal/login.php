@@ -22,7 +22,7 @@
   $apellido = "";
 
   if(isset($datos) && !is_null($datos)){
-      //echo 'hay';
+      
           $id = $datos->id;
           $nombre = $datos->nombre;
           $apellido = $datos->apellido;
