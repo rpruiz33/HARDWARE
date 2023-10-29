@@ -52,9 +52,10 @@ class Iniciar extends CI_Controller {
         } else {
            
             $this->load->view('principal/cabecera');
-            $this->load->view('principal/login', );
+            $this->load->view('principal/login');
             $this->load->view('principal/footer');
         }
+       
     }
  
     public function funcClientes($id) {

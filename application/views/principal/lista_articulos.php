@@ -30,7 +30,7 @@
 
 
 <section class="contenido-princ">
-  <h2 class="lista">LISTA DE ARTICULOS</h2>
+  <h2 class="lista">LISTA DE ARTÍCULOS</h2>
   <div class="borde">
   <div id="tabla_artic" class="table-responsive" >
      <!-- <?php if ($articulos !== false) : ?>   -->
