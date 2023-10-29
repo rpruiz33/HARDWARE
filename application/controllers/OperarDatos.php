@@ -9,8 +9,11 @@ class OperarDatos extends CI_Controller {
     		$this->load->library('session');
             /*--------------------------*/
             $this->load->model('ModeloCliente');
+            $this->load->model('InsertarArticulo');
+           
+                
         }
-       
+     
 	        
         public function RecibirGrabar(){
             
@@ -200,6 +203,15 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/editar',$data);
             $this->load->view('principal/footer');
         }
+
+        public function verDetalle($id) {
+            $data['detalle'] = $this->InsertarArticulo->getArticulo($id);
+        
+            $this->load->view('principal/cabecera');
+            $this->load->view('principal/detalle',$data);
+            $this->load->view('principal/footer');
+        }
+
 }
 
 

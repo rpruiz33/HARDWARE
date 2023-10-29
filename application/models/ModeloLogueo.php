@@ -24,6 +24,8 @@ class ModeloLogueo extends CI_Model {
     function valLogin($nombre, $dni) {
  
         $consulta = $this->db->query("SELECT nombre,dni FROM clientes  WHERE nombre = '" . $nombre. "' and dni='" . $dni."'");
+
+        $this->session->set_userdata('nombre', $nombre);
         if ($consulta->num_rows() == 1) {
             return $consulta->row();
         } else {

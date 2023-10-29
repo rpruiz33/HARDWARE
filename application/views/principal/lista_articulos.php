@@ -2,13 +2,34 @@
 
   .color{
       border: 7px solid #17a2b8;
+
+      
   }
+  .lista{
+    margin-bottom: 0.5rem;
+    margin-left: 29%;
+    font-weight: 1000;
+    line-height: 2.2;
+    left: -33%;
+    /* DISPLAY: FLEX; */
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+    .btn-custom-green {
+    background-color: #3BBA3F; 
+    color: #fff;
+    }
+  
 </style>
 
 
 
 <section class="contenido-princ">
-  <h2>LISTA DE PRODUCTOS</h2>
+  <h2 class="lista">LISTA DE ARTICULOS</h2>
   <div id="tabla_artic" class="table-responsive">
      <!-- <?php if ($articulos !== false) : ?>   -->
       <table class="table table-bordered table-striped">
@@ -21,7 +42,9 @@
             <?php if ($this->session->userdata('tipo_cliente') == 1) { ?>
             <th scope="col"></th>
             <th scope="col"></th>
+        
             <?php }?>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -39,8 +62,10 @@
             <?php }?>
             <?php if ($this->session->userdata('tipo_cliente') == 1) { ?>
               <td><a href="<?=base_url();?>OperarDatos/editarProducto/<?=$articulo->id;?>" class="btn btn-primary">Modificar</a></td>
-            </tr>
+            
             <?php }?>
+            <td><a href="<?=base_url();?>OperarDatos/verDetalle/<?=$articulo->id;?>" class="btn btn-custom-green">Detalle</a></td>
+            </tr>
           <?php endforeach?>
         </tbody>
       </table>
