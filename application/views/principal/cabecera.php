@@ -47,11 +47,11 @@
         <a class="nav-link active" aria-current="page"  href="<?= base_url(); ?>operarDatos/RecibirGrabar">Lista de Clientes</a>
       </li>
       <?php } ?>
-      
+      <?php if ($this->session->userdata('tipo_cliente') == 2) { ?>
       <li class="nav-item">
         <a class="nav-link active" aria-current="page"  href="<?= base_url(); ?>Iniciar/validaLogin">Login</a>
       </li>
-
+      <?php } ?>
        <li class="nav-item">
      
     

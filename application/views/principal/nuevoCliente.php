@@ -1,10 +1,19 @@
+
+<style>
+
+  .color{
+      border: 7px solid #17a2b8;
+  }
+</style>
+
+
 <section class="contenido-princ">
   <h2>Lista de clientes</h2>
   <div id="tabla_artic" class="table-responsive">
      <!-- <?php if ($clientes !== false) : ?>   -->
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
-          <tr>
+          <tr class="color">
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">dni</th>

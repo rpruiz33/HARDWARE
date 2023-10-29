@@ -7,7 +7,7 @@
     margin: 100px 32px 50px 25%;
     width: 50%;
     text-align: center;
-		
+    border: 7px solid #17a2b8;
     }
   </style>
 

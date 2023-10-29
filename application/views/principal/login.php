@@ -1,3 +1,9 @@
+<style>
+
+  .color{
+      border: 7px solid #17a2b8;
+  }
+</style>
 
 <style>
   
@@ -10,6 +16,8 @@
     margin-top: 90px;
     margin-bottom: 9rem;
     
+      border: 7px solid #17a2b8;
+  
   }
 
  

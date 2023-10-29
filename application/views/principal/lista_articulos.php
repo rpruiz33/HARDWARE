@@ -1,14 +1,19 @@
+<style>
 
+  .color{
+      border: 7px solid #17a2b8;
+  }
+</style>
 
 
 
 <section class="contenido-princ">
-  <h2>Lista de productos</h2>
+  <h2>LISTA DE PRODUCTOS</h2>
   <div id="tabla_artic" class="table-responsive">
      <!-- <?php if ($articulos !== false) : ?>   -->
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
-          <tr>
+          <tr class="color">
             <th scope="col">Imagen</th>
             <th scope="col">Artículo</th>
             <th scope="col">Descripción</th>

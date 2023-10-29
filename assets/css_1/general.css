@@ -4,11 +4,8 @@
 					padding:0;
 				}
 
-        body {
-            background-color: #f8f9fa; 
-            color: #343a40; 
-         
-        }
+
+				
 			
 
 					.form_carga {
@@ -63,13 +60,13 @@
 		}
 	
         body {
-            background-color: #f8f9fa; 
-			
+			background-color: #edf2f8;
 				display:flex;
 				flex-direction:column;
 				min-height :100vh;
 			 
         }
+
 
         .form-container {
 			background-color: #343a40;
