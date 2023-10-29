@@ -16,8 +16,11 @@
       margin-top: 0;
       margin-bottom: 1rem;
       color: #17a2b8;
-      font-size: 17px;
+      color: #17a2b8;
+    font-size: 20px;
+    margin: 0px 135px 6px -155px;
     }
+  
   </style>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,6 +40,9 @@
               <?php if ($this->session->userdata('nombre')){?>
                 <p class="usuario">Usuario: <?php echo $this->session->userdata('nombre'); ?></p>
               <?php }} ?>
+              <?php if ($this->session->userdata('tipo_cliente') == 1){ ?>
+                <p class="usuario" >ADMINISTRADOR </p>
+                <?php } ?>
             </a>
           </li>
           <?php if ($this->session->userdata('tipo_cliente') == 2){?>
