@@ -38,11 +38,11 @@ INSERT INTO user (id, usuario, pass, tipo_cliente) VALUES
 (2, 'tio', '123', 1);
 
 INSERT INTO articulos (nombre, descripcion, precio, id, imagen, stock ) VALUES
-("procesador celeron" , "Procesador Barato", "$20000",33,
+("Procesador Celeron" , "Procesador Barato 1600Z", "$20000",33,
 "compragamer_Imganen_general_27562_Procesador_Intel_Celeron_G5925_3_6GHz_Socket_1200_Comet_Lake_764c73ec-grn4.jpg","23 unidades"),
-("Rizen 7 5600g" , "Muy buen procesador", '$50000',11,
+("Rizen 7 5600g" , "Muy buen Procesador", '$50000',11,
 "compragamer_Imganen_general_22302_Procesador_AMD_Ryzen_9_5950X_4.9GHz_Turbo_AM4_-_No_incluye_Cooler_9d34d3b3-grn.jpg",'35 unidades'),
-("Notebook Gamer" , "Ideal para juegos", '$2000000',23,
+("Notebook Gamer" , "Ideal para Juegos", '$2000000',23,
 "compragamer_Imganen_general_32941_Notebook_Gamer_ASUS_TUF_FX506_FHD_IPS_15.6__Core_i5_10300H_8GB_512GB_SSD_NVMe_GTX_1650_Freedos_144Hz_a4f7ad98-grn.jpg",'40 unidades'),
 ("Gabinete Xfactor" , "Gabinete de Alto Rendimiento", '$90000',24,
 "compragamer_Imganen_general_35714_Gabinete_Antec_NX292_MESH_RGB_Vidrio_Templado_a017a79f-grn.jpg",'30 unidades'),
