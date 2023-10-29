@@ -17,6 +17,9 @@
     justify-content: space-evenly;
     align-items: center
   }
+  .contenido-princ{
+     background: lightslategray;
+    }
 </style>
 
 

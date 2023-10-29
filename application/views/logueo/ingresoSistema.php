@@ -10,14 +10,17 @@
     }
     #bienvenida img {
 		padding: 0;
-        margin: 0px -14px 17px 19%;
+        margin: 3px -14px 17px 19%;
 	width :60%;
     height:40%;
     align-items:center;
+    border-radius:10px;
+    margin-bottom:10px;
+    border: 7px solid #17a2b8
     }
     body{
         color: #fff;
-    background-color: #000;
+    background-color: #343a40;;
 
    
     }
@@ -31,10 +34,10 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <h3 class="panel-title colorN">INGRESAR AL PANEL DEL SISTEMA</h3>
+           
                 <div class="panel-body">
                     <form action="<?= base_url(); ?>Iniciar/ValidaUsuario" method="POST">                              
-                        <p>Ingrese su Usuario</p>  
+                        <p>Ingrese su Usuario/administrador</p>  
                         <input type="text" autofocus name="usuario" class="form-control" required="" autocomplete="off">
                         <p>Ingrese su Clave</p>  
                         <input type="password" name="pass" class="form-control" required="" autocomplete="off">

@@ -8,6 +8,9 @@
   text-align: center;
   border: 7px solid #17a2b8;  
   }
+  body{
+    background: lightslategray;
+  }
 </style>
 
 <?php

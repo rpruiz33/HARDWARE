@@ -21,10 +21,12 @@
 
   }
     .btn-custom-green {
-    background-color: #3BBA3F; 
+    background-color: #3EBE1B; 
     color: #fff;
     }
-
+    .contenido-princ{
+     background: lightslategray;
+    }
 </style>
 
 

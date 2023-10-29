@@ -34,6 +34,7 @@
     border: 2px solid black;
     padding: 125px;
     overflow-x: hidden;
+    background: lightslategray;
 }
 
   </style>
