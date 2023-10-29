@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `dni` varchar(200) not NULL unique,
+  `dni` varchar(200) not NULL ,
 
   PRIMARY KEY (`id`)
 ) ;

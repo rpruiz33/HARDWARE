@@ -109,11 +109,13 @@ public function funcClientes2($id){
     }else{
         $this->data['datos'] = null;   
         
-    $this->load->view('principal/cabecera');
-    $this->load->view('principal/registro');
-    $this->load->view('principal/footer');
+            $this->load->view('principal/cabecera');
+            $this->load->view('principal/registro');
+            $this->load->view('principal/footer'); 
+        }
+    
     }
-}
+
 
 
 

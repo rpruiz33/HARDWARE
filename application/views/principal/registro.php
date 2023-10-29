@@ -36,7 +36,7 @@
   <h3 class="text-center">Registrarse</h3><br>
   <?php } ?>
 <div id="formu_aric" class="container">
-    <form action="<?= base_url() ;?>OperarDatos/RecibirGrabar" method="POST" >
+    <form action="<?= base_url() ;?>OperarDatos/RecibirGrabar2" method="POST" >
     <div>
         <input type="hidden" name="id" value="<?php echo $id;?>">
       </div>  
@@ -63,7 +63,7 @@
         <div class="col-md-9">
           <input type="text" name="dni" class="form-control" required maxlength="40">
         </div>
-   
+        <?php $comprobar; ?>
       </div>
       </div>
    

@@ -8,7 +8,7 @@ class InsertarEnClientes extends CI_Model {
         parent::__construct();
     }
 
-// La funcion guarda nombre y apellido en la tabla clientes
+
 function gurdarCliente($id,$nombre,$apellido,$email,$dni){   
 
 		if($id > 0){
@@ -28,7 +28,7 @@ function gurdarCliente($id,$nombre,$apellido,$email,$dni){
        
 }
 
-function gurdarCliente2($id,$nombre,$apellido,$email,$dni,$clave){   
+function gurdarCliente2($id,$nombre,$apellido,$email,$dni){   
 
 	if($id > 0){
 		$data = array(
@@ -42,9 +42,21 @@ function gurdarCliente2($id,$nombre,$apellido,$email,$dni,$clave){
 		$this->db->update('clientes' ,  $data);
 		
 	}else{
-		$consulta = $this->db->query("INSERT INTO clientes (nombre,apellido,dni,email,clave)   VALUES ('$nombre', '$apellido','$dni','$email','$clave')");
+		$consulta = $this->db->query("INSERT INTO clientes (nombre,apellido,email,dni)   VALUES ('$nombre', '$apellido','$email','$dni')");
 	}
 
 		}
-    
+		public function repetido($dni){
+			$this->db->where('dni', $dni);
+			$query = $this->db->get('clientes'); 
+		
+			if ($query->num_rows() > 0) {
+				
+				return true;
+			} else {
+				
+				return false;
+			}
+		}
+		
 }
