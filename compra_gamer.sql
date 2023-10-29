@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `dni` varchar(200) not NULL,
+  `dni` varchar(200) not NULL unique,
 
   PRIMARY KEY (`id`)
 ) ;
@@ -50,11 +50,11 @@ INSERT INTO articulos (nombre, descripcion, precio, id, imagen, stock ) VALUES
 "compragamer_Imganen_general_36913_Memoria_Adata_DDR4_16GB__2x8GB__4133MHz_XPG_Spectrix_D60G_RGB_73bb84d3-grn.jpg",'29 unidades'),
 ("fuente Nisuta" , "Fuente Gamer alto Poder", '$26000',26,
 "compragamer_Imganen_general_37664_Fuente_Redragon_600W_80_Plus_Bronze_GCPS002_c053508f-grn.jpg",'28 unidades'),
-("Procesador Rizen 5" , "Buen procesador y economico", '$30000',27, "descarga1.jpeg",'28 unidades'),
+("Procesador Rizen 5" , "Buen procesador y Economico", '$30000',27, "descarga1.jpeg",'28 unidades'),
 
 ("Memoria RAM Patriot" , "excelente Rendimiento", '$20000',28,
 "compragamer_Imganen_general_23475_Memoria_GeiL_DDR4_16GB__2x8GB__3600MHz_Orion_Red_RGB_2a713588-grn.jpg",'50 unidades'),
-("Procesador RIzen 9" , "buen procesador", '$200000',29,
+("Procesador RIzen 9" , "Buen Procesador", '$200000',29,
 "compragamer_Imganen_general_35942_Procesador_AMD_Ryzen_7_7700X_5.4GHz_Turbo_AM5_OEM_C_VIDEO_acc67d24-grn.jpg",'24 unidades'),
 ("Mother Gigabyte" , "Altisimo Rendimiento", '$500000',30,
 "compragamer_Imganen_general_37531_Mother_GIGABYTE_X570SI_AORUS_PRO_AX_AM4_Mini_ITX_DDR4_27e162fa-grn.jpg",'10 unidades');
