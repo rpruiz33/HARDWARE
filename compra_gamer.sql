@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
+  `email` varchar(255) not NULL,
   `dni` varchar(200) not NULL ,
 
   PRIMARY KEY (`id`)
