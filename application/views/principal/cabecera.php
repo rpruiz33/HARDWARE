@@ -48,7 +48,7 @@
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/index2">
               <?php if ($this->session->userdata('nombre')){?>
             
-                <p class="usuario2">USUARIO :<?php echo $this->session->userdata('nombre'); ?></p>
+                <p class="usuario2">User : <?php echo $this->session->userdata('nombre'); ?></p>
                 
               <?php }} ?>
               <?php if ($this->session->userdata('tipo_cliente') == 1){ ?>
