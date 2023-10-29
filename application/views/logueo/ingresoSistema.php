@@ -4,8 +4,29 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+<style>
+    .color{
+        background-color:black
+    }
+    #bienvenida img {
+		padding: 0;
+        margin: 0px -14px 17px 19%;
+	width :60%;
+    height:40%;
+    align-items:center;
+    }
+    body{
+        color: #fff;
+    background-color: #000;
+
+   
+    }
+  </style>
 <body>
-    <div class="container">
+<div id="bienvenida">
+  <img src="<?= base_url(); ?>assets/imagenes/logueo.jpg" alt="">
+</div>
+    <div class="container" class="color">
         <br/><br/>
         <div class="row">
             <div class="col-md-4"></div>
@@ -19,7 +40,7 @@
                         <input type="password" name="pass" class="form-control" required="" autocomplete="off">
                         <hr/>
                         <input type="checkbox" name="tipo_cliente" value="1">Admin <span class="glyphicon glyphicon-ok"></span> 
-                        <input type="checkbox" name="tipo_cliente" value="2">cliente <span class="glyphicon glyphicon-ok"></span> 
+                        <input type="checkbox" name="tipo_cliente" value="2">Usuario<span class="glyphicon glyphicon-ok"></span> 
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
                         <p><br/></p>
                     </form>
