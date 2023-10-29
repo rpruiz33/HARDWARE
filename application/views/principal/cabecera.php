@@ -54,10 +54,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/funcArticulos">Carga Articulos</a>
           </li>
-        
+          <?php } ?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>OperarDatos/listarArt">Lista Articulos</a>
           </li>
+          <?php if ($this->session->userdata('tipo_cliente') == 1){ ?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>OperarDatos/RecibirGrabar">Lista de Clientes</a>
           </li>
