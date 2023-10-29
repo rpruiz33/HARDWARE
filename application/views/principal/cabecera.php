@@ -31,21 +31,20 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <?php if ($this->session->userdata('tipo_cliente') == 2): ?>
+        <?php if ($this->session->userdata('tipo_cliente') == 2){ ?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/index2">
-              <?php if ($this->session->userdata('nombre')): ?>
+              <?php if ($this->session->userdata('nombre')){?>
                 <p class="usuario">Usuario: <?php echo $this->session->userdata('nombre'); ?></p>
-              <?php endif; ?>
+              <?php }} ?>
             </a>
           </li>
-    
+          <?php if ($this->session->userdata('tipo_cliente') == 2){?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/validaLogin">Login</a>
           </li>
-        <?php endif; ?>
-
-        <?php if ($this->session->userdata('tipo_cliente') == 1): ?>
+          <?php } ?>
+        <?php if ($this->session->userdata('tipo_cliente') == 1){ ?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/funcArticulos">Carga Articulos</a>
           </li>
@@ -54,12 +53,21 @@
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>OperarDatos/listarArt">Lista Articulos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>operarDatos/RecibirGrabar">Lista de Clientes</a>
+            <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>OperarDatos/RecibirGrabar">Lista de Clientes</a>
           </li>
-        <?php endif; ?>
-
+        <?php } ?>
+        <?php if ($this->session->userdata('tipo_cliente') == 2){?>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>iniciar/index">Salir</a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/FuncClientes2/0">Registrarse</a>
+        </li>
+        <?php } ?>
+        <?php if ($this->session->userdata('tipo_cliente') == 1){?>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/FuncClientes2/0">Registrar Clientes</a>
+        </li>
+        <?php } ?>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/index">Salir</a>
         </li>
       </ul>
     </div>

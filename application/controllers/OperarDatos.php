@@ -16,14 +16,22 @@ class OperarDatos extends CI_Controller {
      
 	        
         public function RecibirGrabar(){
-            
+            if ($this->session->userdata('tipo_cliente') == 2)
             {
             $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS); 
             $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_SPECIAL_CHARS); 
             $apellido = filter_input(INPUT_POST, 'apellido', FILTER_SANITIZE_SPECIAL_CHARS);
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
             $dni = filter_input(INPUT_POST, 'dni', FILTER_SANITIZE_SPECIAL_CHARS);
-            $clave=filter_input(INPUT_POST, 'clave', FILTER_SANITIZE_SPECIAL_CHARS);
+            $this->load->view('principal/cabecera');
+                $this->load->view('principal/bienvenida');
+                $this->load->view('principal/footer');
+            }
+            $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS); 
+            $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_SPECIAL_CHARS); 
+            $apellido = filter_input(INPUT_POST, 'apellido', FILTER_SANITIZE_SPECIAL_CHARS);
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+            $dni = filter_input(INPUT_POST, 'dni', FILTER_SANITIZE_SPECIAL_CHARS);
             //echo("nombre ".$nombre."<br> apellido ".$apellido);
            if($apellido==null){
             $this->load->view('principal/cabecera');
@@ -37,7 +45,7 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/footer');
             }
         
-        }}
+        }
                 public function RecibirGrabar2(){
             
             if ($this->session->userdata('tipo_cliente') == 1){
@@ -46,7 +54,7 @@ class OperarDatos extends CI_Controller {
                 $apellido = filter_input(INPUT_POST, 'apellido', FILTER_SANITIZE_SPECIAL_CHARS);
                 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
                 $dni = filter_input(INPUT_POST, 'dni', FILTER_SANITIZE_SPECIAL_CHARS);
-                $clave=filter_input(INPUT_POST, 'clave', FILTER_SANITIZE_SPECIAL_CHARS);
+             
             //echo("nombre ".$nombre."<br> apellido ".$apellido);
             if($apellido==null){
                 $this->load->view('principal/cabecera');

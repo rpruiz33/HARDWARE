@@ -25,7 +25,13 @@
 ?>
 
 <section class="form_carga">
-<h3 class="text-center">Registrar Usuarios</h3><br>
+<?php if ($this->session->userdata('tipo_cliente') == 1){?>
+<h3 class="text-center">Registrar Clientes</h3><br>
+<div id="formu_aric" class="container">
+<?php } ?>
+<?php if ($this->session->userdata('tipo_cliente') == 2){?>
+  <h3 class="text-center">Registrarse</h3><br>
+  <?php } ?>
 <div id="formu_aric" class="container">
     <form action="<?= base_url() ;?>OperarDatos/RecibirGrabar" method="POST" >
     <div>
