@@ -6,7 +6,9 @@
 </style>
 
 <style>
-  
+   body{
+    background: lightslategray;
+  }
   .form_carga {
     padding: 10px;
     margin: 100px 32px 50px 25%;
