@@ -1,62 +1,145 @@
-create database if not exists compra_gamer;
-use compra_gamer;
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
 --
-DROP TABLE IF EXISTS compra_gamer.articulos;
-DROP TABLE IF EXISTS compra_gamer.clientes;
-DROP TABLE IF EXISTS compra_gamer.articulos;
-DROP TABLE IF EXISTS compra_gamer.user;
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-10-2023 a las 19:26:40
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-CREATE TABLE articulos (
-  nombre varchar(100) ,
-  descripcion varchar(100) NOT NULL,
-  precio varchar(100) NOT NULL,
-  id int	(255) NOT NULL,
-  imagen varchar(300) NOT NULL
-);
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-CREATE TABLE IF NOT EXISTS `clientes` (
-  `id` int NOT NULL AUTO_INCREMENT,
+--
+create database appweb;
+use  appweb;
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `articulos`
+--
+
+CREATE TABLE `articulos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `descripcion` varchar(25) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `precio` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `articulos`
+--
+
+INSERT INTO `articulos` (`id`, `nombre`, `descripcion`, `stock`, `precio`) VALUES
+(14, 'Camiseta de Boca', 'Camiseta Adidas Original', 7, 25000),
+(15, 'Camiseta de Argentina', 'Camiseta Adidas Original', 10, 30000),
+(16, 'Pantalon Adidas', 'Pantalon largo Original', 2, 14000),
+(17, 'Pantalon Nike', 'Pantalon corto Original', 14, 18000),
+(18, 'Pantalon jean', 'Pantalon largo azul oscur', 6, 6000),
+(19, 'Buzo con capucha', 'Buzo color blanco', 15, 7000),
+(20, 'Musculosa militar', 'Musculosa con camuflaje', 13, 9000),
+(21, 'Pantalon militar', 'Pantalon largo de camufla', 20, 10000),
+(22, 'Bufanda', 'Bufanda negra', 8, 1500),
+(23, 'Gorra con vicera', 'Gorra de color negra', 25, 2500);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `dni` varchar(200) not NULL,
+  `dni` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-  PRIMARY KEY (`id`)
-) ;
+--
+-- Volcado de datos para la tabla `clientes`
+--
 
-CREATE TABLE user (
-  id int(11) NOT NULL primary key,
-  usuario varchar(255) NOT NULL,
-  pass varchar(255) NOT NULL,
-  tipo_cliente tinyint(2) NOT NULL
-);
+INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `dni`) VALUES
+(18, 'Rodrigo', 'Velazquez', 43783777),
+(19, 'German', 'Ramirez', 34789541),
+(20, 'Roberto', 'Diaz', 29354715),
+(22, 'beto', 'ruiz', 11);
 
-INSERT INTO user (id, usuario, pass, tipo_cliente) VALUES
-(1, 'lopez', '123', 2),
-(2, 'tio', '123', 1);
+-- --------------------------------------------------------
 
-INSERT INTO articulos (nombre, descripcion, precio, id, imagen) VALUES
-("procesador celeron" , "procesador barato", '$20000',1,
-"compragamer_Imganen_general_27562_Procesador_Intel_Celeron_G5925_3_6GHz_Socket_1200_Comet_Lake_764c73ec-grn4.jpg"),
-("Rizen 7" , "buen procesador", '$50000',2,
-"compragamer_Imganen_general_22302_Procesador_AMD_Ryzen_9_5950X_4.9GHz_Turbo_AM4_-_No_incluye_Cooler_9d34d3b3-grn.jpg"),
-("Notebook Gamer" , "ideal para juegos", '$2000000',3,
-"compragamer_Imganen_general_32941_Notebook_Gamer_ASUS_TUF_FX506_FHD_IPS_15.6__Core_i5_10300H_8GB_512GB_SSD_NVMe_GTX_1650_Freedos_144Hz_a4f7ad98-grn.jpg"),
-("Gabinete Xfactor" , "gabinete de alto rendimiento", '$90000',4,
-"compragamer_Imganen_general_35714_Gabinete_Antec_NX292_MESH_RGB_Vidrio_Templado_a017a79f-grn.jpg"),
-("Ram Xfactor " , "DDR5", '$323232',5,
-"compragamer_Imganen_general_36913_Memoria_Adata_DDR4_16GB__2x8GB__4133MHz_XPG_Spectrix_D60G_RGB_73bb84d3-grn.jpg"),
-("fuente Nisuta" , "fuente camer", '$26000',6,
-"compragamer_Imganen_general_37664_Fuente_Redragon_600W_80_Plus_Bronze_GCPS002_c053508f-grn.jpg"),
-("Procesador Rizen 5" , "buen procesador", '$30000',7,
-"descarga1.jpeg"),
-("Memoria RAM Patriot" , "excelente rendimiento", '$20000',8,
-"compragamer_Imganen_general_23475_Memoria_GeiL_DDR4_16GB__2x8GB__3600MHz_Orion_Red_RGB_2a713588-grn.jpg"),
-("Procesador RIzen 9" , "buen procesador", '$200000',9,
-"compragamer_Imganen_general_35942_Procesador_AMD_Ryzen_7_7700X_5.4GHz_Turbo_AM5_OEM_C_VIDEO_acc67d24-grn.jpg"),
-("Mother Gigabyte" , "alto rendimiento", '$500000',10,
-"compragamer_Imganen_general_37531_Mother_GIGABYTE_X570SI_AORUS_PRO_AX_AM4_Mini_ITX_DDR4_27e162fa-grn.jpg");
-INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `email`, `dni`) VALUES
-(42, 'jessica', 'mendez', '42233652', 'yeyiimendez@gmail.com'),
-(60, 'manuela', 'castañeira', '8888888', 'fteizquiera@arg.com');
+--
+-- Estructura de tabla para la tabla `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(25) NOT NULL,
+  `pass` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `usuario`, `pass`) VALUES
+(1, 'rodrigo', '1234'),
+(2, 'lopez', '1234');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

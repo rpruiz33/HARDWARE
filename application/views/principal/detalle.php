@@ -30,7 +30,11 @@
     .detalle-imagen {
       margin-top: 20px;
     }
-
+    .borde {
+    border: 2px solid black;
+    padding: 125px;
+    overflow-x: hidden;
+}
 
   </style>
 
@@ -42,7 +46,7 @@
     <div id="detalle_articulo" class="container">
       <?php if ($detalle !== false) : ?>
         <div class="row">
-          <div class="col-md-6" class="otroborde"  >
+          <div class="col-md-6" >
             <table class="table table-bordered table-striped">
               <thead class="thead-dark">
                 <tr class="color">
@@ -66,6 +70,10 @@
                 <tr>
                   <td>Precio</td>
                   <td><?= $detalle->precio; ?></td>
+                </tr>
+                <tr>
+                  <td>Stock</td>
+                  <td><?= $detalle->stock; ?></td>
                 </tr>
               </tbody>
             </table>
