@@ -5,7 +5,7 @@
       border: 7px solid #17a2b8;
   }
   h2{
-    margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
     margin-left: 29%;
     font-weight: 1000;
     line-height: 2.2;

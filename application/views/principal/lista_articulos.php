@@ -18,19 +18,21 @@
     align-content: space-between;
     justify-content: space-evenly;
     align-items: center;
+
   }
     .btn-custom-green {
     background-color: #3BBA3F; 
     color: #fff;
     }
-  
+
 </style>
 
 
 
 <section class="contenido-princ">
   <h2 class="lista">LISTA DE ARTICULOS</h2>
-  <div id="tabla_artic" class="table-responsive">
+  <div class="borde">
+  <div id="tabla_artic" class="table-responsive" >
      <!-- <?php if ($articulos !== false) : ?>   -->
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
@@ -72,5 +74,6 @@
     <?php else : ?>
       <p>No se encontraron resultados.</p>
     <?php endif; ?>
+  </div>
   </div>
 </section>

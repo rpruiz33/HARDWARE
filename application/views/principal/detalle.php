@@ -30,22 +30,24 @@
     .detalle-imagen {
       margin-top: 20px;
     }
+
+
   </style>
 
 </head>
 
 <body>
-  <section class="contenido-princ">
+  <section class="borde" >
     <h2 class="lista">DETALLE DE ARTÍCULO</h2>
     <div id="detalle_articulo" class="container">
       <?php if ($detalle !== false) : ?>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" class="otroborde"  >
             <table class="table table-bordered table-striped">
               <thead class="thead-dark">
                 <tr class="color">
-                  <th scope="col">Atributo</th>
-                  <th scope="col">Valor</th>
+                  <th scope="col">Articulo</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
