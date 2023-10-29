@@ -23,7 +23,7 @@ class Iniciar extends CI_Controller {
         $pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_SPECIAL_CHARS);
         $tipo_cliente = $this->input->post('tipo_cliente');
 
-        //$this->load->model('ModeloLogueo');
+      
         $valido = $this->ModeloLogueo->valIngreso($usuario, $pass, $tipo_cliente);
      
         if ($valido != null) {
@@ -41,7 +41,6 @@ class Iniciar extends CI_Controller {
         $dni = filter_input(INPUT_POST, 'dni', FILTER_SANITIZE_SPECIAL_CHARS);
         $tipo_cliente = $this->input->post('tipo_cliente');
 
-        //$this->load->model('ModeloLogueo');
         $valido = $this->ModeloLogueo->valLogin($nombre, $dni);
    
         if ($valido != null) {

@@ -21,7 +21,7 @@
 						margin-bottom: 20px;
 				}
         .form_carga input[type="text"], .form_carga input[type="file"] {
-            margin-bottom: 15px; /* Espaciado inferior para los campos de texto y archivo */
+            margin-bottom: 15px; 
         }
 
         .form_carga input[type="submit"] {
