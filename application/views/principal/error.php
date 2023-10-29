@@ -1,13 +1,13 @@
 <style>
         #bienvenida img {
-		padding: 0;
-        margin: -3px -9px 30px 28%;
-	width :60%;
-    height:40%;
-    align-items:center;
-    border-radius:10px;
-    margin-bottom:10px;
-    border: 7px solid #17a2b8
+            padding: 0;
+    margin: 11px -9px 30px 28%;
+    width: 50%;
+    height: 40%;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 7px solid #17a2b8;
     }
     body {
 			background: #212529 ;
