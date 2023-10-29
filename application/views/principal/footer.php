@@ -1,17 +1,17 @@
 
   <style>
-    /* Estilo adicional personalizado */
+   
     .contenido-princ {
-      padding: 20px; /* Agregado para dar espacio al contenido */
+      padding: 20px; 
       padding: 125px;
     }
 
-    /* Estilo para el footer */
+
     .footer {
-      background-color: #343a40; /* Color de fondo */
-      padding: 30px 0; /* Espaciado interno */
-      color: #ffffff; /* Color del texto */
-      text-align: center; /* Alineación del texto al centro */
+      background-color: #343a40; 
+      padding: 30px 0;
+      color: #ffffff; 
+      text-align: center; 
       margin-top:auto;
       height:100%; 
     }

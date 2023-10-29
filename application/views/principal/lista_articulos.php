@@ -11,7 +11,7 @@
     font-weight: 1000;
     line-height: 2.2;
     left: -33%;
-    /* DISPLAY: FLEX; */
+
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
