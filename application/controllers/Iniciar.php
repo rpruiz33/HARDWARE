@@ -23,7 +23,7 @@ class Iniciar extends CI_Controller {
         $pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_SPECIAL_CHARS);
         $tipo_cliente = $this->input->post('tipo_cliente');
 
-      
+        
         $valido = $this->ModeloLogueo->valIngreso($usuario, $pass, $tipo_cliente);
      
         if ($valido != null) {
@@ -37,25 +37,40 @@ class Iniciar extends CI_Controller {
         }
     }
     public function ValidaLogin() {
-        $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_SPECIAL_CHARS);
-        $dni = filter_input(INPUT_POST, 'dni', FILTER_SANITIZE_SPECIAL_CHARS);
+        $nombre = $this->input->post('nombre');
+        $dni = $this->input->post('dni');
         $tipo_cliente = $this->input->post('tipo_cliente');
-
+        
         $valido = $this->ModeloLogueo->valLogin($nombre, $dni);
-   
-        if ($valido != null) {
+    
+        if ($valido) {
             
-            $this->load->view('principal/cabecera');
-            $this->load->view('principal/bienvenida');
-            $this->load->view('principal/footer');
+            $usuarioRegistrado = $this->ModeloLogueo->verifica($nombre, $dni);
+    
+            if ($usuarioRegistrado) {
+                
+                $this->session->set_userdata('nombre', $nombre);
+    
+                $this->load->view('principal/cabecera');
+                $this->load->view('principal/bienvenida');
+                $this->load->view('principal/footer');
+            } else {
+                
+                $this->session->unset_userdata('nombre'); 
+                $this->load->view('principal/cabecera');
+                $this->load->view('principal/login');
+                $this->load->view('principal/footer');
+                echo "Usuario no registrado";
+            }
         } else {
-           
+            
+            $this->session->unset_userdata('nombre'); 
             $this->load->view('principal/cabecera');
             $this->load->view('principal/login');
             $this->load->view('principal/footer');
         }
-       
     }
+    
  
     public function funcClientes($id) {
         $this->load->model('ModeloCliente');
@@ -108,13 +123,11 @@ public function funcClientes2($id){
     }else{
         $this->data['datos'] = null;   
         
-            $this->load->view('principal/cabecera');
-            $this->load->view('principal/registro');
-            $this->load->view('principal/footer'); 
-        }
-    
+    $this->load->view('principal/cabecera');
+    $this->load->view('principal/registro');
+    $this->load->view('principal/footer');
     }
-
+}
 
 
 

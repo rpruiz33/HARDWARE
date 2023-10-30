@@ -46,7 +46,7 @@
         <?php if ($this->session->userdata('tipo_cliente') == 2){ ?>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= base_url(); ?>Iniciar/index2">
-              <?php if ($this->session->userdata('nombre')){?>
+              <?php if ($this->session->userdata('nombre')!=""){?>
             
                 <p class="usuario2">User : <?php echo $this->session->userdata('nombre'); ?></p>
                 

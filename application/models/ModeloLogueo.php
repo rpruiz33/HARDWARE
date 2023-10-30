@@ -31,7 +31,19 @@ class ModeloLogueo extends CI_Model {
         } else {
             return false;
         }
+
+
     }
+    public function verifica($nombre, $dni) {
+        
+        $this->db->where('nombre', $nombre);
+        $this->db->where('dni', $dni);
+        $query = $this->db->get('clientes');
+
+      
+        return $query->num_rows() > 0;
+    }
+
 
     function  modificarDatos($idcliente,$nombre,$apellido){
         $data = array(
