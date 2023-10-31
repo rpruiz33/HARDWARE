@@ -14,7 +14,7 @@
     }
     #bienvenida img {
 		padding: 0;
-    margin: 32px
+    margin: -22px;
 	
     }
   </style>
