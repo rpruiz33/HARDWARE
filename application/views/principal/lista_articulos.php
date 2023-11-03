@@ -35,7 +35,7 @@
   <h2 class="lista">LISTA DE ARTÍCULOS</h2>
   <div class="borde">
   <div id="tabla_artic" class="table-responsive" >
-     <!-- <?php if ($articulos !== false) : ?>   -->
+     <!-- <?php if ($articulos !== false) {?>   -->
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr class="color">
@@ -73,9 +73,9 @@
           <?php endforeach?>
         </tbody>
       </table>
-    <?php else : ?>
+    <?php }else {?>
       <p>No se encontraron resultados.</p>
-    <?php endif; ?>
+    <?php } ?>
   </div>
   </div>
 </section>

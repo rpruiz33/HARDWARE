@@ -70,11 +70,7 @@ class OperarDatos extends CI_Controller {
        
     
     }
-    public function Cargar() {
-        $this->load->view('principal/cabecera');
-        $this->load->view('principal/detalle_usuario');
-        $this->load->view('principal/footer');
-    }
+   
 
     public function GrabarArticulo() {
         $nombre_articulo = $this->input->post('nombre');
