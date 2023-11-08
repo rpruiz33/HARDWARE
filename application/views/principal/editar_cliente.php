@@ -48,12 +48,7 @@
           <input type="text" name="apellido"value="<?php echo $apellido;?>"  class="form-control" maxlength="100">
         </div>
       </div>
-      <div class="form-group row">
-        <label for="dni" class="col-md-3 col-form-label">dni</label>
-        <div class="col-md-9">
-          <input type="text" name="dni"value="<?php echo $dni;?>"  class="form-control" maxlength="100">
-        </div>
-      </div>
+     
 
       <div class="form-group row">
         <label for="email" class="col-md-3 col-form-label">email</label>
@@ -61,7 +56,12 @@
           <input type="text" name="email"value="<?php echo $email;?>"  class="form-control" maxlength="100">
         </div>
       </div>
-
+      <div class="form-group row">
+        <label for="dni" class="col-md-3 col-form-label">dni</label>
+        <div class="col-md-9">
+          <input type="text" name="dni"value="<?php echo $dni;?>"  class="form-control" maxlength="100">
+        </div>
+      </div>
  
       <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
