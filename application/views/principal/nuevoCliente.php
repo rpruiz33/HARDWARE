@@ -32,8 +32,8 @@
           <tr class="color">
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
-            <th scope="col">dni</th>
             <th scope="col">email</th>
+            <th scope="col">dni</th>
             <th></th>
             <th></th>
           </tr>

@@ -22,7 +22,7 @@
   }
     .btn-custom-green {
     background-color: #3EBE1B; 
-    color: #fff;
+    color: white;
     }
     .contenido-princ{
      background: lightslategray;

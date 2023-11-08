@@ -34,8 +34,8 @@ function gurdarCliente2($id,$nombre,$apellido,$email,$dni){
 		$data = array(
 		'nombre' => $nombre,
 		'apellido' => $apellido,
-		'dni' => $dni,
-		'email' => $email,);
+		'email' => $email,
+		'dni' => $dni);
 	
 		$this->db->where ('id' ,  $id);
 		$this->db->update('clientes' ,  $data);
