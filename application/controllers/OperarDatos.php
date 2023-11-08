@@ -23,7 +23,7 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/bienvenida');
             $this->load->view('principal/footer');
         }
-
+        if ($this->session->userdata('tipo_cliente') == 1){
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
         $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_SPECIAL_CHARS);
         $apellido = filter_input(INPUT_POST, 'apellido', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -36,13 +36,13 @@ class OperarDatos extends CI_Controller {
             $this->load->view('principal/footer');
         } else {
             $this->load->model('InsertarEnClientes');
-            $valido = $this->InsertarEnClientes->gurdarCliente($id, $nombre, $apellido, $email, $dni);
+            $valido = $this->InsertarEnClientes->gurdarCliente2($id, $nombre, $apellido, $email, $dni);
             $this->load->view('principal/cabecera');
             $this->load->view('principal/nuevoCliente');
             $this->load->view('principal/footer');
         }
     }
-
+    }
     public function RecibirGrabar2() {
     
             $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
